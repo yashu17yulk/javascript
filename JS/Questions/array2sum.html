@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+<script>
+/*
+    TwoSum();
+
+    function TwoSum() {
+        let arr = [1, 2, 5, 4, 3, 9, 8];
+        let target = prompt("enter a sum value");                   
+        let newArray = [];                            //use for store the value  
+
+        for (let i = 0; i < arr.length; i++) {                        
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] + arr[j] == target) {
+            newArray.push(`${[arr[i] ,  arr[j]]} &nbsp`  );      //newArray  store and show the pair value
+            }
+        }
+        }
+        document.write(newArray, "<br/><br/>");
+        document.write("Total Pairs = ", newArray.length);
+    }
+ */
+
+
+    TwoPairs();
+
+    function TwoPairs(){
+    let arr = [ 1 , 2 , 5 , 4 , 3 , 9 , 8];
+    let target = prompt("enter a sum value"); 
+    let newArray = [];                    //use for store the value 
+
+    for (let i=0; i< arr.length; i++){
+        if(arr[i] + arr[i+1] == target){
+            newArray.push(`${[arr[i]]}  ,  ${[arr[i+1]]}  <br/>`  );     //newArray  store and show the pair value
+        
+        }
+    }
+    document.write(`Array =${arr} <br/><br/>`);
+    document.write(`${newArray} <br/><br/>`);
+    document.write(`Total Pairs = ${newArray.length}`);
+
+}
+
+
+
+
+
+
+
+
+
+</script>
+</head>
+<body></body>
+</html>

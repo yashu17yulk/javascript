@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <script>
+    //errors
+  // 7types of error
+
+  /*
+
+    RangeError     A RangeError is thrown when trying to pass a value as an argument to a function that does not allow a range that includes the value.
+    ReferenceError   when you call the function it's not define it's called Refernce error.
+    SyntaxError     when you not typed properly .
+    TypeError         float,bollean,true it's predefined when user define another type then it's called TypeError.
+    URIError         when you not define the proper parameter then you got URIError
+    EvalError       when you use Eval function error.
+    InternalError  This error occurs internally in the JS engine, especially when it has too much data to handle and the stack grows way over its critical limit.
+
+    */
+
+    //try and catch
+
+
+    /*
+    try {
+    
+
+     blabla();
+
+
+      console.log("End of try");
+    } catch(error) {
+   
+      console.log(error);
+      console.log(error.message);
+      console.log(error.stack);
+    }
+*/
+
+
+
+
+try{
+  let json = '{"age":30 }';
+  let user = JSON.parse(json);
+
+  console.log(user.name);
+  console.log(user.age);
+
+  if(!user,name){
+    throw new Error("Incomplete data : no name ");
+  }
+}catch(error){
+  console.log(error);
+}finally{
+  console.log('finally');
+}
+
+
+function myFunction() {
+  const message = document.getElementById("p01");
+  message.innerHTML = "";
+  let x = document.getElementById("demo").value;
+  try { 
+    if(x == "")  throw "is empty";
+    if(isNaN(x)) throw "is not a number";
+    x = Number(x);
+    if(x > 10)   throw "is too high";
+    if(x < 5)  throw "is too low";
+  }
+  catch(err) {
+    message.innerHTML = "Input " + err;
+  }
+  finally {
+    document.getElementById("demo").value = "";
+  }
+}
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+
+  <body><input id="demo" type="text">
+    <button type="button" onclick="myFunction()">Test Input</button>
+    
+    <p id="p01"></p>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+
+// apply()   method, you can write a method that can be used on different objects.
+
+
+ 
+
+
+const person = {
+    fullName: function(city, country) {
+        console.log( this.firstName + " " + this.lastName + "," + city + "," + country);
+    }
+  }
+  
+  const person1 = {
+    firstName:"John",
+    lastName: "Doe"
+  }
+  
+  person.fullName.apply(person1, ["Oslo", "Norway"]);
+ // person.fullName.call(person1, ["Oslo", "Norway"]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

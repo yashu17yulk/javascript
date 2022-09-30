@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<script>
+// call(), an object can use a method belonging to another object.
+
+const youtuber = {
+
+    name:"yash",
+    class:"mscit",
+    feature: function(){
+        console.log(`hiiiiii ${this.name}  and ${this.class}`)
+    }
+}
+
+youtuber.feature();
+
+
+const youtuber1 = {
+
+    name:"madaan",
+    class:"phd",
+}
+
+youtuber.feature.call(youtuber1);
+
+
+</script>
+
+
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

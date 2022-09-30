@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+
+//bind()   method, an object can borrow a method from another object.
+
+
+const youtuber = {
+
+   name:'yash',
+   class:'mscit',
+   feature: function(){
+    console.log(`my   ${this.name}  m ${this.class}`);
+   }
+}
+
+//youtuber.feature();
+
+let youtuberFun = youtuber.feature.bind(youtuber);
+
+youtuberFun();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

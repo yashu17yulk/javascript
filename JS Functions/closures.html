@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+
+//closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment)
+// a closure gives you access to an outer function's scope from an inner function.
+// it inherit  from the  lexcial resource 
+//Consequently, you can use a closure anywhere that you might normally use an object with only a single method.
+
+const outerFun = (a)=> {                         //outerfunction
+    let b =10;
+    const innerFun = ()=>{                 //inner function
+        let sum = a+b;
+
+        console.log(`the sum of two no ${sum}`);
+    }
+innerFun();
+}
+
+outerFun(5);
+
+
+//lexcial scope
+//A lexical scope in JavaScript means that a variable defined outside a function can be
+// accessible inside another function defined after the variable declaration
+
+
+
+var sum = function (a,b,c){
+
+    return{
+        gettwosum(){
+            return a+b;
+        },
+        getthreesum(){
+                return a+b+c;
+        }
+    }
+    }
+    var store=sum(5,2,3);
+    console.log(store.gettwosum());
+    console.log(store.getthreesum());
+    
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

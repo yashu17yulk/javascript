@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    //Arrowfunctions 
+    
+
+    //1 old way
+
+    /*
+    function hello(){
+        console.log("hello");
+
+    }
+
+    
+
+    hello();  */
+
+    //new way
+
+    // let hello =() => console.log("hello");
+
+/*
+    let welcome = (name,age) =>`hel ${name} ${age}`;
+    
+console.log(welcome("yash",22))
+  */  
+
+
+//2 no need to define parmeters
+
+/*
+let hello = _ => console.log("hello");
+
+hello();
+*/
+
+//3 arguments binding   it's can bind the arguments
+
+/*
+let myFunce = {  
+    showArgs(){ 
+    console.log(arguments); 
+    } 
+}; 
+myFunce.showArgs(1, 2, 3, 4);
+
+
+
+let myFunc = {  
+    showArgs : () => { 
+    console.log(...arguments);      //arrow function 
+} 
+}; 
+myFunc.showArgs(1, 2, 3, 4);
+*/
+
+
+//4 no duplicate named paramenters
+
+
+//let add = (x,x) =>{};
+//syntax errors: duplicate argument
+
+
+//5  use of this keyword
+
+/*
+let me = { 
+    name: "Ashutosh Verma", 
+    thisInArrow:() => { 
+    console.log("My name is " + this.name); // no 'this' binding here 
+    }, 
+    thisInRegular(){ 
+    console.log("My name is " + this.name); // 'this' binding works here 
+    } 
+};
+me.thisInArrow(); 
+me.thisInRegular();
+*/
+
+
+
+//6 implicit return
+
+/*
+function myFunction() {                         //regular function
+    return 42;
+  }
+
+  var reg = myFunction(); 
+  console.log(reg);
+*/
+
+/*
+  const inc = (num)=> num+1;
+
+  console.log(inc(20));
+*/
+
+//7 no use constructor in arrow function 
+
+/*
+const car =(color) => {
+    this.color= color;
+}
+
+const redCar1 = new car1('red');
+*/
+
+
+//8 cannot be invoked with new 
+
+/*
+function Animal(name) {                           //normal function
+    this.name = name;
+  }const cat = new Animal('cat'); 
+  console.log('cat: ', cat);
+  */
+
+  /*
+  const Animal = (name) => {
+    this.name = name;
+  };// TypeError: Animal is not a constructor.
+  const cat = new Animal('cat');
+*/
+
+
+
+//9 Function Hoisting
+
+/*
+normalFunc();
+function normalFunc() {
+    console.log("hello");
+}
+*/
+// "Normal Function"
+
+/*
+arrowFunc()
+const arrowFunc = () => {
+    return "Arrow Function"
+}
+*/
+// ReferenceError: Cannot access 'arrowFunc' before initialization
+
+
+//10 methods
+
+/*
+class FullName {
+    constructor(name) {
+        this.name = name;
+    }    result() {
+        console.log(this.name)
+    }
+}let name = new FullName("Suprabha")
+console.log(name);
+*/
+// FullName {name: "Suprabha"}
+
+
+
+class FullName {
+    constructor(name) {
+        this.name = name;
+    }    result = () => {
+        console.log(this.name)
+    }
+}let name = new FullName("Suprabha")
+setTimeout(name.result, 2000) // Suprabha
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

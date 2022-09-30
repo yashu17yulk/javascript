@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+    function dgplus(arr){
+        let sumForPrincepal = 0;
+        let sumForOther = 0;
+        for(let i=0; i < arr.length; i++){
+            sumForPrincepal += arr[i][i];
+            sumForOther += a[i][arr.length - 1 - i];
+        }
+        
+        document.write(">>>>>>>> Plus   ",sumForPrincepal,"<br/>")  
+        document.write(">>>>>>>> Plus   ",sumForOther,"<br/>");
+    
+        const finalPlus = Math.abs(sumForOther + sumForPrincepal);
+        document.write(">>>>>>>>Diagonal Plus   ",finalPlus)
+
+    }
+        const a = [[1,2,5], [6,7,8], [9,10,11]];
+    dgplus(a);
+    
+    </script>
+    
+</body>
+</html>

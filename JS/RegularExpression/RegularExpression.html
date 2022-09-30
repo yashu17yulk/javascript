@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <script>
+    console.log("i love javascript ");
+
+    let reg = /love/g;
+
+    // /love/g     g for global    search whole string
+    // /love/i     i means case insensitive
+
+    console.log(reg);
+
+    console.log(reg.source);
+
+     
+
+    /*
+    let s = "this is great code with harry and also harRy bhai";
+    let result = reg.exec(s);
+
+    if (result) {
+      console.log(result);
+      console.log(result.input);
+      console.log(result.index);
+    }
+
+    let result2 = reg.test(code);
+
+    console.log(result2);
+*/
+    let text = "Visit W3Schools!"; 
+    let n = text.search(/w3Schools/i);
+
+    console.log(n);
+
+    let text1 = "Visit Microsoft!";
+let result = text1.replace("Microsoft", "W3Schools");
+console.log(result);
+
+
+  </script>
+
+  <body></body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+
+    <script>
+      //objects    A JavaScript object is a collection of named values
+      // you can create array inside the object
+      // you can create multiple functions
+
+      var a = {
+        fname: "yash",
+        lname: "madaan",
+        age: 25,
+        email: "yashmadaan08@ymail.com",
+        favmovies: ["kid", "don", "ironman"],
+        salary: function () {
+          return 25000;
+        },
+        fullname: function () {
+          return this.fname + " " + this.lname;
+        },
+      };
+        
+      a.fname='yashika';                //modifiy
+      a.hno=33;                          //add
+      delete a.hno;                      //delete
+      document.write(a.lname, "<br/>");
+      document.write(a.favmovies, "<br/>");
+      document.write(a.salary(), "<br/>");
+      document.write(a.fullname(), "<br/>");
+      console.log(a);
+      console.log(a.fname);
+      console.log('height' in a); //false       
+      console.log('lname' in a);  //true             //check the properties   true or false
+
+
+
+//itteration
+
+let p ={
+    firstname:'yash',
+    lasrname: 'madaan',
+
+}
+
+p.age = 23;
+
+for(let key in p){
+    console.log(key + ": "+p[key]);
+    document.write(key + ": "+p[key],"<br/>");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </head>
+  <body></body>
+</html>

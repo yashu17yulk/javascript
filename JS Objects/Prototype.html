@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+
+    //prototype  All JavaScript objects inherit properties and methods from a prototype.
+  // super class
+  // with the help of you can change the constructor value 
+    
+ function Student(first, last, age, cls){
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.class = cls;
+ }
+
+var student1 = new Student("yash","madaan",22,"msc");
+var student2 = new Student("jasmeet","dhillion",20,"bca");
+
+Student.prototype.nationality = "Indian";
+console.log(student1);
+console.log(student2);
+
+student1.name = function (){
+    return this.firstName + " "+this.lastName;
+}
+console.log(student1.name());
+ 
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

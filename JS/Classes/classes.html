@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//classes     JavaScript Classes are templates for JavaScript Objects.
+// is a special method for crating and intializing an object created with in class  
+
+/*
+
+   class Student{
+    constructor(name)
+{
+    this.name = name;
+}  
+ }
+var Student1 = new Student("yash");    
+console.log(Student1);
+
+let student2 = {name:"john"};
+console.log(student2)
+
+*/
+  //with method
+
+  /*
+ class hello{
+    message(){
+        console.log("hello");
+    }
+    sorry(){
+        console.log("sorry");
+    }
+ }
+ let a = new hello();
+ a.message();
+ a.sorry();
+*/
+
+ //methods
+
+ //1 Constructor  
+
+class student{
+    constructor(name,age){                                            //constructor
+        this.studentname = name;
+        this.studentage = age;
+        console.log("hii");
+    }
+    hello(){
+        console.log(` hello ${this.studentname}  your age is ${this.studentage}`);      //prototype
+    }
+    static staticMethod(){
+        console.log("static function ");                 //static 
+    }
+}
+
+let a = new student("yash ", 25);
+
+a.hello();
+student.staticMethod();
+
+
+
+
+
+ //2 Prototype
+/*
+ message(){
+    console.log("hello");
+ }
+*/
+ //3 Static
+/*
+ static name(){
+    console.log("hello");
+ }
+*/
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
