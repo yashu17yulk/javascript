@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+  /*
+  Promises are used to handle asynchronous operations in JavaScript. 
+  They are easy to manage when dealing with multiple asynchronous operations
+  where callbacks can create callback hell leading to unmanageable code.
+*/
+
+
+
+//resolve
+//reject
+//pending
+
+
+
+ //let complete = false;
+
+
+ /*
+ function prom(complete){
+
+ return  new Promise(function(resolve,reject){
+    console.log("fetch the data please wait")
+    setTimeout(()=>{
+
+ 
+   if(complete){
+     resolve("done");
+   }else{
+     reject("false");
+     
+   }
+},2000)
+ });
+}
+
+let onflufilment = (result) => {
+    console.log(result);
+}
+
+let onRejection = (error) =>{
+    console.log(error);
+}
+
+prom(true).then(onflufilment).catch(onRejection);
+*/
+  //console.log(prom(true));
+
+
+//example 2
+
+/*
+function func1(){
+  return new Promise(function(resolve,reject){
+        setTimeout(()=>{
+     const error = true;
+     if(!error){
+        console.log('your promise has been resolved')
+    resolve(); 
+    }
+    else{
+        console.log('your promise has not been resolved')
+    reject('sorry not fulfilled');
+    }
+        },2000);
+  })
+
+}
+
+func1().then(function(){
+    console.log("thanks for resolving");
+}).catch(function(){
+    console.log("very bad bro ", + error);
+})
+*/
+
+function func1(){
+  return new Promise(function(resolve,reject){
+   setTimeout(()=>{
+
+    const error = false;
+   if(!error){ 
+    console.log('your promise has been resolved ')
+     resolve();
+    }
+    else{
+      console.log('your promise has not been resolved')
+      reject('sorry not fulfilled');
+    }
+   },2000);
+
+  }) 
+}
+
+func1()
+.then(function(){
+console.log("harry thanks for resolving");
+}).catch(function(){
+  console.log("harry: very bad bro ")
+})
+
+
+
+</script>
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

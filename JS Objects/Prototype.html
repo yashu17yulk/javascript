@@ -8,8 +8,9 @@
 
 <script>
 
-    //prototype  All JavaScript objects inherit properties and methods from a prototype.
-  // super class
+    
+ //prototype  are the mechanism by which javascript objects inherit features from one another
+    // super class
   // with the help of you can change the constructor value 
     
  function Student(first, last, age, cls){
@@ -32,6 +33,36 @@ student1.name = function (){
 console.log(student1.name());
  
 
+//example2
+
+let users={
+    getfullName:function(){
+      return this.name+ " "+this.lastname
+    }
+    
+  }
+  
+  
+  
+  let student={ 
+  
+      name:'anil',
+      lastname:'sidhu',
+     
+  }
+    
+    
+    let teacher={ 
+  
+      name:'dharm',
+      lastname:'singh',
+    
+  }
+    teacher.__proto__= users;
+    student.__proto__= users;
+  
+     console.log(student.getfullName())
+    console.log(teacher.getfullName())
 
 
 

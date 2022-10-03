@@ -8,13 +8,110 @@
 
 <script>
 
-//class
+ 
+//Classes are a template for creating objects.
+
+class Employee{
+    constructor(givenName,givenExperience,givenDivision){
+        this.name = givenName;
+        this.experience = givenExperience;
+        this.division = givenDivision;
+
+    }                      
+    slogan(){
+        return `i am ${this.name} and this commpany is the best`;
+    }
+     joininYear(){
+        return 2022 -this.experience;
+     }
+     static add(a,b){              //you can use without object  
+                                    //static method
+        return a+ b;
+     }
+}
+//Static class methods are defined on the class itself.
+//You cannot call a static method on an object, only on an object class.
 
 
+let harry = new Employee("harry",6,"Division");
+console.log(harry);
+console.log(harry.joininYear());
+console.log(harry.slogan());
+console.log(Employee.add(34,6));
 
 
+//inherit
+//A class created with a class inheritance inherits all the methods from another class:
+/*
+class Programmer  extends Employee{
+    constructor(givenName,givenExperience,givenDivision,language,github){
+        super(givenName,givenExperience,givenDivision);    //The super() method refers to the parent class.
+        this.language = language;
+        this.github  = github;
 
 
+    }
+     favoriteLanguage(){
+        if(this.language == 'python'){
+            return 'python';
+
+        }
+        else {
+            return 'javascript';
+        }
+    }
+    static multiply(a,b){
+        return a * b;
+    }
+}
+
+rohan = new Programmer("rohan",3,"lays","go","rohan420")
+console.log(rohan);
+console.log(rohan.favoriteLanguage());
+console.log(Programmer.multiply(5,5));
+*/
+class MScIT{
+  
+    constructor(fname,lname){
+      this. firstname=fname;
+      this. lastname=lname;
+    }
+  
+}
+
+let student = new MScIT("yash","madaan");
+
+console.log("first class",student);
+
+class   students extends MScIT {
+  
+  constructor(fname,lname,rollno){
+  super(fname,lname);
+        this. firstname=fname;
+      this. lastname=lname;
+    this.Rno = rollno;
+  }
+  
+}
+
+let student1 = new students("harish","tiwari",55);
+
+console.log("Second class",student1);
+
+class Girl extends students {
+  constructor(fname,lname,rollno,city){
+    super(fname,lname,rollno);
+    this.firstname = fname;
+    this.lastname = lname;
+    this.Rno = rollno;
+    this.cit = city;
+   
+  }
+}
+let girls = new Girl("preeti","verma",420,"chandigarh");
+
+console.log("Third class",girls);
+ 
 
 
 

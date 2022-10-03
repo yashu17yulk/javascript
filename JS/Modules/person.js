@@ -8,3 +8,6 @@ export {name,age};
 let fname = "kiddd";
 
 export default fname;
+
+
+ 

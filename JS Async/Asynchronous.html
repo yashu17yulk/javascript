@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+
+    //Functions running in parallel with other functions are called asynchronous
+
+   setTimeout(()=>{
+  for(let index = 0; index < 4000; index++){
+     const element  = index;
+   console.log("this is index number"+ index);
+  } 
+
+   },100);
+
+   console.log('done printing')
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

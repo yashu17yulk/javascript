@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+
+
+//callbacks This technique allows a function to call another function
+
+ 
+
+
+//example 1
+
+/*
+const perOne = (friend,callfrnd)=> {
+  
+    console.log(`i am busy ${friend}`);
+   callfrnd();
+ }
+ 
+ const perTwo = ()=>{
+   console.log(`i call you back`)
+ }
+ 
+ perOne("thapa",perTwo);
+*/
+
+//example 2
+
+/*
+function greeting(name){
+  alert(`Hello ${name}`);
+}
+
+function userinput(callback){
+  const name = prompt("Please enter your name");
+  callback(name);
+}
+
+userinput(greeting);
+*/
+
+//example 3 
+
+/*
+function hrcall(cb){
+  console.log('hr called')
+  cb();
+}
+
+function hrDirector(){
+  console.log('director')
+}
+
+hrcall(hrDirector);
+ */
+
+
+
+//example 4️
+
+function sayHello(){
+  console.log("hello");
+}
+
+
+function add(num1, num2, callback){
+  console.log(num1+ num2);
+  callback();
+}
+
+let a = 10;
+let b = 20;
+
+add(a,b,sayHello);
+
+
+
+// callback hell
+//The cascading code above is called callback hell. It is hard to debug and add error handling to. It also reduces code readability. 
+//There are other names used for this callback hell like a pyramid of doom
+
+rundirection(100,'top',function(){
+  rundirection(200,'left',function(){
+    rundirection(300,'bottom',function(){
+
+    })
+  })
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>
