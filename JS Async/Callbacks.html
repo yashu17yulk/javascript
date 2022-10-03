@@ -94,6 +94,15 @@ rundirection(100,'top',function(){
 
 
 
+ // with promises way
+
+rundirection(100,"Top")
+.then(()=>rundirection(200,'left'))
+.then(()=>rundirection(200,'bottom'))
+.then(()=>rundirection(200,'right'))
+ 
+
+
 
 
 

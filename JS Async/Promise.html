@@ -55,33 +55,10 @@ prom(true).then(onflufilment).catch(onRejection);
 
 
 //example 2
-
+ 
 /*
 function func1(){
-  return new Promise(function(resolve,reject){
-        setTimeout(()=>{
-     const error = true;
-     if(!error){
-        console.log('your promise has been resolved')
-    resolve(); 
-    }
-    else{
-        console.log('your promise has not been resolved')
-    reject('sorry not fulfilled');
-    }
-        },2000);
-  })
-
-}
-
-func1().then(function(){
-    console.log("thanks for resolving");
-}).catch(function(){
-    console.log("very bad bro ", + error);
-})
-*/
-
-function func1(){
+  console.log("pending status")
   return new Promise(function(resolve,reject){
    setTimeout(()=>{
 
@@ -105,6 +82,28 @@ console.log("harry thanks for resolving");
 }).catch(function(){
   console.log("harry: very bad bro ")
 })
+*/
+
+const promise = new Promise ((resolve,reject)=>{
+  if(true){
+    resolve("it worked");
+  }else(
+    reject("rejected")
+  )
+});
+
+promise
+.then(result=> result + "?")
+.then(result2=> result2 + "*")
+.then((result3) =>{
+  throw Error;
+  console.log(result3);
+})
+.catch(() =>console.log("error in result 3!"));
+
+
+
+
 
 
 
