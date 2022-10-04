@@ -56,7 +56,7 @@ prom(true).then(onflufilment).catch(onRejection);
 
 //example 2
  
-
+/*
 function func1(){
  
 return   new Promise(function(resolve,reject){
@@ -86,7 +86,7 @@ console.log("harry thanks for resolving");
 }).catch(function(){
   console.log("harry: very bad bro ")
 })
-
+*/
 
 /*
 const promise = new Promise ((resolve,reject)=>{
@@ -107,6 +107,136 @@ promise
 .catch(() =>console.log("error in result 3!"));
 
 */
+
+
+
+ 
+
+
+//promise .all
+//This returned promise will fulfill when all of the input's promises have fulfilled,
+
+/*
+
+const promise1 = new  Promise((resolve,reject)=>{
+  setTimeout(() => resolve('promise1'),500);
+});
+
+
+const promise2 = new  Promise((resolve,reject)=>{
+  setTimeout(() => resolve('promise2'),200);
+});
+
+
+const promise3 = new  Promise((resolve,reject)=>{
+  setTimeout(() =>  reject(new Error()),100);
+});
+
+Promise.all([promise1,promise2,promise3]).then((value)=> {
+  console.log(value);
+}, () =>{
+  console.log('Error');
+});
+
+*/
+
+
+//promise .allSettled
+//The Promise.allSettled() method returns a promise that resolves
+//after all of the given promises have either fulfilled or rejected,
+
+/*
+const promise1 = new  Promise((resolve,reject)=>{
+  setTimeout(() => resolve('promise1'),500);
+});
+
+
+const promise2 = new  Promise((resolve,reject)=>{
+  setTimeout(() => resolve('promise2'),200);
+});
+
+
+const promise3 = new  Promise((resolve,reject)=>{
+  setTimeout(() =>  reject(new Error()),100);
+});
+
+Promise.allSettled([promise1,promise2,promise3]).then((value)=> {
+  console.log(value);
+}, () =>{
+  console.log('Error');
+});
+*/
+
+//promise race
+// when you only want the result from the first
+
+/*
+const promise1 = new  Promise((resolve,reject)=>{
+  setTimeout(() => resolve('promise1'),300);
+});
+
+
+const promise2 = new  Promise((resolve,reject)=>{
+  setTimeout(() => resolve('promise2'),200);
+});
+
+
+const promise3 = new  Promise((resolve,reject)=>{
+  setTimeout(() =>  resolve('promise3'),100);
+});
+
+Promise.race([promise1,promise2,promise3]).then((value)=> {
+  console.log(value);
+}, () =>{
+  console.log('Error');
+});
+*/
+
+
+
+//promise .any      they give you promise only not rejected
+
+
+const promise1 = new  Promise((resolve,reject)=>{
+  setTimeout(() => resolve('promise1'),300);
+});
+
+const promise2 = new  Promise((resolve,reject)=>{
+  setTimeout(() => resolve('promise2'),200);
+});
+const promise3 = new  Promise((resolve,reject)=>{
+  setTimeout(() => reject('promise3'),100);
+});
+
+
+Promise.any([promise1,promise2,promise3]).then((value)=> {
+  console.log(value);
+}, () =>{
+  console.log('Error');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
