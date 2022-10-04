@@ -12,6 +12,8 @@
 // it use for create utility function 
 
 
+
+/*
 class mobile {
     constructor(){}
     static disp(){
@@ -20,13 +22,83 @@ class mobile {
 }
 document.write(mobile.disp());
 console.log(mobile.disp());
+*/
+
+/*
+
+class emp{
+   static x=1;
+    constructor(){
+        console.log("constructor call");
+    }
+   static getx(){
+        emp.x++;
+        console.log( emp.x);
+    }
+}
+
+console.log(emp.x);
+  emp.getx();
+*/
+
+
+/*
+class Test{
+    static display(){
+        return "static method is invoked";
+
+    }
+    static display(){
+        return "static method is invoked again ";
+
+    }
+}
+document.write(Test.display() + "<Br>");
+document.write(Test.display1());
+*/
+
+/*
+
+class Test{
+    constructor(){
+        document.write(" hii");
+    }
+static display(){
+    document.write(" static <br>");
+    }
+}
+var test1=new Test();
+Test.display();
 
 
 
+class Test2{
+
+   constructor(){
+    document.write(" done");
+   }
+ 
+}
+ new Test2();
+ Test.display()
+ */
 
 
+class Person{
+    static name = "john";
+    static height = 160;
 
+    static getUserInfo(){
+        console.log(`My name is ${this.name} and my height is ${this.height}`);
+    }
 
+    static setUserHeight(value){
+    this.height = value;
+    }
+}
+Person.getUserInfo();
+Person.setUserHeight(200);
+Person.getUserInfo();
 
 
 </script>

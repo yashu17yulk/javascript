@@ -63,47 +63,93 @@ hrcall(hrDirector);
 
 //example 4️
 
-function sayHello(){
+
+
+/*
+
+
+function sayHello3(){
+  console.log("hiii");
+}
+function sayHello4(){
+  console.log("hiii");
+}
+
+function add(num1, num2,f1,f2){
+  f1(f2)
+  return(num1+ num2) ;
+ 
+
+}
+function sayHello1(f2){
   console.log("hello");
+  f2();
 }
-
-
-function add(num1, num2, callback){
-  console.log(num1+ num2);
-  callback();
+function sayHello2(){
+  console.log("hiii");
 }
-
 let a = 10;
 let b = 20;
 
-add(a,b,sayHello);
-
-
+let v=add(a,b,sayHello1,sayHello2);
+console.log(v);
+*/
 
 // callback hell
 //The cascading code above is called callback hell. It is hard to debug and add error handling to. It also reduces code readability. 
 //There are other names used for this callback hell like a pyramid of doom
 
-rundirection(100,'top',function(){
-  rundirection(200,'left',function(){
-    rundirection(300,'bottom',function(){
+/*
+setTimeout(()=>{
 
-    })
-  })
-});
+console.log("called to hr");
+setTimeout(()=>{
+
+  console.log("called to Director");
+
+setTimeout(()=>{
+
+console.log("information update");
 
 
+},1000);
+},1000);
+},2000);
+*/
 
- // with promises way
+// with promise
 
-rundirection(100,"Top")
-.then(()=>rundirection(200,'left'))
-.then(()=>rundirection(200,'bottom'))
-.then(()=>rundirection(200,'right'))
+var promise1 = new Promise((resolve,reject)=>{
+  
+  setTimeout(()=>{
+    console.log("yes called to hr");
+    resolve('called to  HR')
+  },2000)
+})
+
+
+var promise2 = new Promise((resolve,reject)=>{
+  
+  setTimeout(()=>{
+    console.log("yes Hr to Director");
+    resolve('Hr to Director')
+  },2000)
+})
  
 
+promise1.then((value)=>{
+  console.log(value);
+})
+.catch(err=>{
+  console.log("error is :" +err)
+})
 
-
+promise2.then((value)=>{
+  console.log(value);
+})
+.catch(err=>{
+  console.log("error is :" +err)
+})
 
 
 
