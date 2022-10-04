@@ -56,23 +56,27 @@ prom(true).then(onflufilment).catch(onRejection);
 
 //example 2
  
-/*
-function func1(){
-  console.log("pending status")
-  return new Promise(function(resolve,reject){
-   setTimeout(()=>{
 
-    const error = false;
-   if(!error){ 
+function func1(){
+ 
+return   new Promise(function(resolve,reject){
+  
+  setTimeout(()=>{
+
+    let data=prompt("true ya false")
+   
+   if(!data){ 
     console.log('your promise has been resolved ')
-     resolve();
+    resolve();
+
     }
     else{
       console.log('your promise has not been resolved')
+   
       reject('sorry not fulfilled');
     }
-   },2000);
-
+   },1000);
+   console.log("seff");
   }) 
 }
 
@@ -82,8 +86,9 @@ console.log("harry thanks for resolving");
 }).catch(function(){
   console.log("harry: very bad bro ")
 })
-*/
 
+
+/*
 const promise = new Promise ((resolve,reject)=>{
   if(true){
     resolve("it worked");
@@ -101,7 +106,7 @@ promise
 })
 .catch(() =>console.log("error in result 3!"));
 
-
+*/
 
 
 
