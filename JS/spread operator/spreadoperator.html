@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      //spread operator allows us to quickly copy all or part of an existing array
+      //or object into another array or object.
+
+    function sum(name, ...args) {
+        console.log(arguments);
+
+        document.write(`Hello ${name} : `);
+
+        let sum = 0;
+        for (let i in args) {
+        sum += args[i];
+        }
+        document.write(sum);
+    }
+
+    var arr = [10, 20, 30];
+    sum("yash", ...arr);
+
+      // example 2️
+
+    function sum(x, y, z) {
+        return x + y + z;
+    }
+
+    const numbers = [1, 2, 3];
+
+    console.log(sum(...numbers));
+
+      //example3
+
+    var arr1 = [10, 20, 30, 40];
+
+    var arr2 = [...arr1];
+    arr1.push(50);
+
+    console.log([...arr1]);
+
+    console.log([arr]);
+
+      //example 4️
+
+    var arr1 = [10, 20, 30, 40];
+
+    var arr2 = [50, 60];
+
+    var arr3 = arr1.concat(arr2);
+
+    console.log(arr3);
+
+      //with concat method
+
+    var arr1 = [10, 20, 30, 40];
+
+    var arr2 = [50, 60];
+
+    var arr3 = [...arr1, ...arr2];
+
+    console.log(arr3);
+
+      //example 5️
+
+    var obj1 = {
+        name: "yash",
+    };
+
+    var obj2 = {
+        age: 11,
+    };
+    var obj3 = { ...obj1, ...obj2 };
+    console.log(obj3);
+    </script>
+</head>
+<body></body>
+</html>

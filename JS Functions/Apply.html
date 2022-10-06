@@ -13,7 +13,7 @@
 
  
 
-
+/*
 const person = {
     fullName: function(city, country) {
         console.log( this.firstName + " " + this.lastName + "," + city + "," + country);
@@ -24,12 +24,32 @@ const person = {
     firstName:"John",
     lastName: "Doe"
   }
-  
-  person.fullName.apply(person1, ["Oslo", "Norway"]);
+  */
+  //person.fullName.apply(person1, ["Oslo", "Norway"]);
  // person.fullName.call(person1, ["Oslo", "Norway"]);
 
 
+ 
 
+
+ let student = {
+    firstName:"Anil",
+    lastname:"sidhu",
+    age:30,
+ }
+ 
+ let teacher = {
+  firstName:"Mandeep",
+  lastname:"sandhu",
+  age:30,
+ 
+}
+
+ function getEmail(){
+  return `${this.firstName}.${this.lastname}@gmail.com `
+}
+console.log(getEmail.call(teacher));
+console.log(getEmail.call(student));
 
 
 

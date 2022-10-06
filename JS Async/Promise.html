@@ -182,7 +182,7 @@ const promise2 = new  Promise((resolve,reject)=>{
 
 
 const promise3 = new  Promise((resolve,reject)=>{
-  setTimeout(() =>  resolve('promise3'),100);
+  setTimeout(() =>  reject('promise3'),100);
 });
 
 Promise.race([promise1,promise2,promise3]).then((value)=> {
@@ -190,13 +190,12 @@ Promise.race([promise1,promise2,promise3]).then((value)=> {
 }, () =>{
   console.log('Error');
 });
-*/
 
+ */
 
+//promis.any they give you promise only not rejected
 
-//promise .any      they give you promise only not rejected
-
-
+ 
 const promise1 = new  Promise((resolve,reject)=>{
   setTimeout(() => resolve('promise1'),300);
 });
@@ -204,17 +203,23 @@ const promise1 = new  Promise((resolve,reject)=>{
 const promise2 = new  Promise((resolve,reject)=>{
   setTimeout(() => resolve('promise2'),200);
 });
+
 const promise3 = new  Promise((resolve,reject)=>{
   setTimeout(() => reject('promise3'),100);
 });
 
+const promise4 = new  Promise((resolve,reject)=>{
+  setTimeout(() => resolve('promise4'),150);
+});
 
-Promise.any([promise1,promise2,promise3]).then((value)=> {
+
+
+Promise.any([promise1,promise2,promise3,promise4]).then((value)=> {
   console.log(value);
 }, () =>{
   console.log('Error');
 });
-
+ 
 
 
 
