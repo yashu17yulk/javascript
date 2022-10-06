@@ -10,7 +10,7 @@
 
 //bind()   method, an object can borrow a method from another object.
 
-
+/*
 const youtuber = {
 
    name:'yash',
@@ -25,8 +25,36 @@ const youtuber = {
 let youtuberFun = youtuber.feature.bind(youtuber);
 
 youtuberFun();
+*/
+let student = {
+    firstName:"Anil",
+    lastname:"sidhu",
+    age:30,
+}
+
+let teacher = {
+firstName:"Mandeep",
+lastname:"sandhu",
+age:30,
+}
+
+function getEmail(){
+return `${this.firstName}.${this.lastname}@gmail.com `
+}
 
 
+function chooseSubject(sub1,sub2){
+console.log(sub1,sub2);
+}
+
+
+
+//console.warn(getEmail.bind(teacher))
+
+let callanothertime = getEmail.bind(teacher);
+
+
+console.warn(callanothertime);
 
 
 

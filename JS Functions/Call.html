@@ -9,7 +9,9 @@
 
 <script>
 // call(), an object can use a method belonging to another object.
+// for changing the context
 
+/*
 const youtuber = {
 
     name:"yash",
@@ -29,6 +31,40 @@ const youtuber1 = {
 }
 
 youtuber.feature.call(youtuber1);
+*/
+
+
+let student = {
+    firstName:"Anil",
+    lastname:"sidhu",
+    age:30,
+}
+
+let teacher = {
+firstName:"Mandeep",
+lastname:"sandhu",
+age:30,
+
+}
+
+function getEmail(){
+return this.email =`${this.firstName}.${this.lastname}@gmail.com `
+}
+
+
+function chooseSubject(sub1,sub2){
+console.log(sub1,sub2);
+}
+
+
+
+//console.log(getEmail.call(student));
+//console.log(getEmail.call(teacher,"maths"));
+
+console.log(chooseSubject.call(teacher,"maths","science")); // any type of parameters
+
+//console.log(chooseSubject.apply(teacher,["maths","science"])); // only array type of parameters
+
 
 
 </script>

@@ -31,25 +31,27 @@ const person = {
 
  
 
-
- let student = {
-    firstName:"Anil",
-    lastname:"sidhu",
-    age:30,
- }
  
- let teacher = {
-  firstName:"Mandeep",
-  lastname:"sandhu",
+let student = {
+  firstName:"Anil",
+  lastname:"sidhu",
   age:30,
- 
 }
 
- function getEmail(){
-  return `${this.firstName}.${this.lastname}@gmail.com `
+let teacher = {
+firstName:"Mandeep",
+lastname:"sandhu",
+age:30,
+
 }
-console.log(getEmail.call(teacher));
-console.log(getEmail.call(student));
+
+function chooseSubject(sub1,sub2){
+console.log(sub1,sub2);
+}
+
+
+console.log(chooseSubject.apply(teacher,["maths","science"])); // only array type of parameters
+
 
 
 
