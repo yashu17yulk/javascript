@@ -7,9 +7,8 @@
     <title>Document</title>
 <script>
 
-
-//callbacks This technique allows a function to call another function
-
+  //A callback is a function passed as an argument to another function
+  //This technique allows a function to call another function
  
 
 
@@ -98,6 +97,18 @@ console.log(v);
 // callback hell
 //The cascading code above is called callback hell. It is hard to debug and add error handling to. It also reduces code readability. 
 //There are other names used for this callback hell like a pyramid of doom
+
+/*
+function(sum){
+  return function sum(multiply){
+    return function multiply(){
+    };
+    
+  };  
+  }
+
+*/
+
 
 /*
 setTimeout(()=>{
