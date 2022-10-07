@@ -8,16 +8,14 @@
 
 <script>
 
-//closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment)
-// a closure gives you access to an outer function's scope from an inner function.
-// it inherit  from the  lexcial resource 
-//Consequently, you can use a closure anywhere that you might normally use an object with only a single method.
+//closure is the combination of a function bundled together  with references to its surrounding state  
+ 
+ 
 
 
-const outerFun = (a)=> {                         //outerfunction
+const outerFun = (a)=> {                       
     let b =10;
-    const innerFun = ()=>{                 //inner function
-        let sum = a+b;
+    const innerFun = ()=>{                 
 
         console.log(`the sum of two no ${sum}`);
     }
@@ -51,11 +49,30 @@ var sum = function (a,b,c){
 
 
 
- 
+
+//Advantages
+
+/*
+They help remove redundant code.
+
+They help maintain modular code.
+
+They provide data encapsulation.
+
+Variables in closures can help you maintain a state that you can use later.
+
+*/
+
+//Disadvantages
+
+/*
+The variables declared inside a closure are not garbage collected.
+
+Too many closures can slow down your application. This is actually caused by duplication of code in the memory.
 
 
 
-
+*/
 
 
 

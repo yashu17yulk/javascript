@@ -1,68 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-<script>
+    <script>
+      //prototype  are the mechanism by which javascript objects inherit features from one another
+    
+      /*
+      function Student(first, last, age, cls) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.class = cls;
+      }
 
-    
- //prototype  are the mechanism by which javascript objects inherit features from one another
-    // super class
-  // with the help of you can change the constructor value 
-    
- function Student(first, last, age, cls){
-    this.firstName = first;
-    this.lastName = last;
-    this.age = age;
-    this.class = cls;
+      var student1 = new Student("yash", "madaan", 22, "msc");
+      var student2 = new Student("jasmeet", "dhillion", 20, "bca");
+
+      Student.prototype.nationality = "Indian";
+      console.log(student1);
+      console.log(student2);
+
+      student1.name = function () {
+        return this.firstName + " " + this.lastName;
+      };
+      console.log(student1.name());
+*/
+      //example2
+
+ let users={
+  
+  getfullName: function(){
+    return this.name + " "+this.lastname
+  },
+  getAge:function(){
+    let age = new Date().getFullYear()-this.birth;
+    return age
+  },
+
  }
 
-var student1 = new Student("yash","madaan",22,"msc");
-var student2 = new Student("jasmeet","dhillion",20,"bca");
+ let student={
+    name:"anil",
+    lastname:'sidhu',
+    birth:2000,
+ }
 
-Student.prototype.nationality = "Indian";
-console.log(student1);
-console.log(student2);
-
-student1.name = function (){
-    return this.firstName + " "+this.lastName;
+ let  teacher={
+  name:"mandeep",
+  lastname:'sandhu',
+  birth:1980,
+   
 }
-console.log(student1.name());
- 
 
-//example2
+teacher.__proto__= users;
+student.__proto__= users;
 
-let users={
-    getfullName:function(){
-      return this.name+ " "+this.lastname
-    }
-    
-  }
-  
-  
-  
-  let student={ 
-  
-      name:'anil',
-      lastname:'sidhu',
-     
-  }
-    
-    
-    let teacher={ 
-  
-      name:'dharm',
-      lastname:'singh',
-    
-  }
-    teacher.__proto__= users;
-    student.__proto__= users;
-  
-     console.log(student.getfullName())
-    console.log(teacher.getfullName())
+
+// console.log(student.getfullName());
+// console.log(teacher.getAge());
+console.log(teacher.getAge());
+console.log(student.getAge());
 
 
 
@@ -70,7 +71,6 @@ let users={
 
 
 
-</script>
 
 
 
@@ -78,8 +78,8 @@ let users={
 
 
 
-</head>
-<body>
-    
-</body>
+
+    </script>
+  </head>
+  <body></body>
 </html>
